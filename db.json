@@ -1,0 +1,39 @@
+{
+  "transactions": [
+    {
+      "id": "c38e",
+      "type": "income",
+      "amount": 40000,
+      "category": "Salary",
+      "date": "2024-07-01"
+    },
+    {
+      "id": "0303",
+      "type": "expense",
+      "amount": 19100,
+      "category": "Rent",
+      "date": "2024-07-02"
+    },
+    {
+      "id": "06fa",
+      "type": "income",
+      "amount": 6320,
+      "category": "Lend Amount",
+      "date": "2024-07-01"
+    },
+    {
+      "id": "2b67",
+      "type": "expense",
+      "amount": 1510,
+      "category": "Credit Card",
+      "date": "2024-07-03"
+    },
+    {
+      "id": "19d4",
+      "type": "expense",
+      "amount": 15000,
+      "category": "Investment",
+      "date": "2024-07-05"
+    }
+  ]
+}
