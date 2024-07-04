@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { addTransaction } from "../features/transactions/transactionSlice";
 
 const AddTransaction = () => {
@@ -49,22 +49,44 @@ const AddTransaction = () => {
   );
 };
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  animation: ${fadeIn} 0.5s ease-in-out;
 `;
 
 const Select = styled.select`
   padding: 10px;
   margin: 10px 0;
   font-size: 1rem;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: #4caf50;
+  }
 `;
 
 const Input = styled.input`
   padding: 10px;
   margin: 10px 0;
   font-size: 1rem;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: #4caf50;
+  }
 `;
 
 const Button = styled.button`
@@ -74,6 +96,8 @@ const Button = styled.button`
   color: white;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+
   &:hover {
     background-color: #45a049;
   }

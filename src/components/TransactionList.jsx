@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchTransactions } from '../features/transactions/transactionSlice';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { ClipLoader } from 'react-spinners';
 
 const TransactionList = () => {
@@ -49,9 +49,9 @@ const TransactionList = () => {
         {filteredTransactions.map((transaction) => (
           <ListItem key={transaction.id}>
             {transaction.type === 'income' ? (
-              <Income>{transaction.type}: ${transaction.amount} - {transaction.category}</Income>
+              <Income>{transaction.type}: ₹{transaction.amount} - {transaction.category}</Income>
             ) : (
-              <Expense>{transaction.type}: ${transaction.amount} - {transaction.category}</Expense>
+              <Expense>{transaction.type}: ₹{transaction.amount} - {transaction.category}</Expense>
             )}
             <DateComp>{transaction.date}</DateComp>
           </ListItem>
@@ -76,6 +76,7 @@ const ErrorMessage = styled.div`
 const FilterContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 20px 0;
   label {
     margin: 0 10px;
@@ -90,6 +91,17 @@ const List = styled.ul`
   padding: 0;
 `;
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const ListItem = styled.li`
   padding: 10px;
   margin: 10px 0;
@@ -97,6 +109,7 @@ const ListItem = styled.li`
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
+  animation: ${fadeIn} 0.5s ease-in-out;
 `;
 
 const Income = styled.span`

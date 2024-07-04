@@ -1,4 +1,4 @@
-# ReactFlow Chat Builder
+# React Finance Tracker Application
 
 This application is a personal finance tracker. The application allows the user to track their income and expenses, categorize them and display summary statistics in the form of Pie chart.
 
@@ -39,6 +39,14 @@ To run the project in development environment use:
 ```bash
 npm run dev
 ```
+
+To run the Mock API in development environment use:
+
+```bash
+npx json-server --watch db.json --port 3001
+```
+
+**Remember** db.json file should be in the root directory.
 
 This application is build using [Vite](https://vitejs.dev/), so the localhost now be running on http://localhost:5173
 

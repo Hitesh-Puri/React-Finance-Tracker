@@ -34,6 +34,13 @@
       "amount": 15000,
       "category": "Investment",
       "date": "2024-07-05"
+    },
+    {
+      "id": "3c90",
+      "type": "expense",
+      "amount": 510,
+      "category": "Outside Food",
+      "date": "2024-07-03"
     }
   ]
 }
