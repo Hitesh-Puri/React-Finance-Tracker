@@ -4,6 +4,7 @@ import Summary from "./components/Summary";
 import TransactionList from "./components/TransactionList";
 import CategoryBreakdown from "./components/CategoryBreakdown";
 import GlobalStyle from "./globalStyles";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <TransactionList />
           <CategoryBreakdown />
         </Content>
+        <Footer />
       </Container>
     </>
   );
@@ -28,12 +30,7 @@ const Container = styled.div`
   max-width: 800px;
   margin: 40px auto; /* Added margin to create spacing */
   padding: 20px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.7
-  );
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
