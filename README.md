@@ -4,7 +4,7 @@ This application is a personal finance tracker. The application allows the user 
 
 ## Project Overview
 
-![]()
+![](https://github.com/Hitesh-Puri/React-Finance-Tracker/blob/main/demo.png)
 
 [Live Demo]()
 
