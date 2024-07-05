@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "concurrently \"vite build\" \"npm run start-server\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start-server": "npx json-server --watch db.json --port 3001",
-    "start": "concurrently \"npm run build\" \"npm run start-server\""
+    "start": "concurrently \"npm run dev\" \"npm run start-server\""
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.5.2",

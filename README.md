@@ -6,7 +6,7 @@ This application is a personal finance tracker. The application allows the user 
 
 ![](https://github.com/Hitesh-Puri/React-Finance-Tracker/blob/main/demo.png)
 
-[Live Demo]()
+[Live Demo](https://financefix.netlify.app/)
 
 ## Features
 
